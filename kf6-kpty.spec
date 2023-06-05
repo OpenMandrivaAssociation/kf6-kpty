@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Pty
 %define devname %mklibname KF6Pty -d
-%define git 20230527
+%define git 20230605
 
 Name: kf6-kpty
 Version: 5.240.0
