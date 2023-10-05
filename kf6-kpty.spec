@@ -1,6 +1,6 @@
 %define libname %mklibname KF6Pty
 %define devname %mklibname KF6Pty -d
-%define git 20230927
+%define git 20231005
 
 Name: kf6-kpty
 Version: 5.240.0
@@ -74,7 +74,6 @@ Interfacing with pseudo terminal devices
 %files -n %{devname}
 %{_includedir}/KF6/KPty
 %{_libdir}/cmake/KF6Pty
-%{_qtdir}/mkspecs/modules/qt_KPty.pri
 %{_qtdir}/doc/KF6Pty.*
 
 %files -n %{libname}
