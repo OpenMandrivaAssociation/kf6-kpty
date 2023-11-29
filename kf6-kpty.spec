@@ -5,7 +5,7 @@
 #define git 20231103
 
 Name: kf6-kpty
-Version: 5.245.0
+Version: 5.246.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpty/-/archive/master/kpty-master.tar.bz2#/kpty-%{git}.tar.bz2
