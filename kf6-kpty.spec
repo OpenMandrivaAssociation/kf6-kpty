@@ -2,10 +2,10 @@
 
 %define libname %mklibname KF6Pty
 %define devname %mklibname KF6Pty -d
-%define git 20240217
+#define git 20240217
 
 Name: kf6-kpty
-Version: 5.250.0
+Version: 6.0.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpty/-/archive/master/kpty-master.tar.bz2#/kpty-%{git}.tar.bz2
