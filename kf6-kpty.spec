@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kpty
-Version: 6.28.0
+Version: 6.29.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kpty/-/archive/master/kpty-master.tar.bz2#/kpty-%{git}.tar.bz2
@@ -37,6 +37,8 @@ BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(KF6CoreAddons)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: utempter-devel
+BuildSystem:	cmake
+BuildOption:	-DBUILD_QCH:BOOL=ON
 Requires: %{libname} = %{EVRD}
 
 %description
@@ -59,22 +61,6 @@ Requires: %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}.
 
 Interfacing with pseudo terminal devices
-
-%prep
-%autosetup -p1 -n kpty-6.28.0
-%cmake \
-	-DBUILD_QCH:BOOL=ON \
-	-DBUILD_WITH_QT6:BOOL=ON \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang %{name} --all-name --with-qt --with-html
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kpty.*
